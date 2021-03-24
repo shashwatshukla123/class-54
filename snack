@@ -1,0 +1,25 @@
+import React, { Component } from 'react';
+import { Button, View, Text, Alert } from 'react-native';
+export class RedButton extends Component {
+  displayAlert=()=>{
+    alert("this is an alert")
+  }
+  render(){
+    return(
+     <Button title={this.props.title} color={this.props.color} onPress={this.displayAlert}></Button>
+     
+    )
+   }
+}
+
+export default class App extends Component {
+  render() {
+    return (
+      <View style={{marginTop:480}}>
+      <Text>My first App</Text>
+           <RedButton title='click me' color="red"/>
+           <RedButton title='press me' color="blue"/>
+      </View>
+    );
+  }
+}
